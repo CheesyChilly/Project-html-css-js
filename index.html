@@ -10,11 +10,11 @@
   </head>
   <body>
     <!-- Main nav bar -->
-    <nav id="main-nav">
+    <nav id="desktop-nav">
       <div class="logo">Ankit Bose</div>
-      <div class="nav-elements">
+      <div>
         <!-- various links -->
-        <ul>
+        <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -22,6 +22,59 @@
         </ul>
       </div>
     </nav>
+    <nav id="ham-nav">
+      <div class="logo">Ankit Bose</div>
+      <div class="ham-menu">
+        <!-- hamburger logo -->
+        <div class="ham-icon" onclick="togglemenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <ul>
+            <li><a href="#about" onclick="togglemenu()">About</a></li>
+            <li><a href="#experience" onclick="togglemenu()">Experience</a></li>
+            <li><a href="#projects" onclick="togglemenu()">Projects</a></li>
+            <li><a href="#Contact" onclick="togglemenu()">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="Assets/default-profile-pic.jpg" alt="About pic here" class="default-profile"/>
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello i am</p>
+        <h1 class="title">Ankit Bose</h1>
+        <p class="section__text__p2">
+          <span class="starting_a">A </span>Frontend Dev
+        </p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./Assets/resume-example.pdf')">
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#Contact'">
+            Contact
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./Assets/linkedin.png"
+            alt="My linkedin profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/ankit-bose-62596a231/'" />
+          <img
+            src="./Assets/github.png"
+            alt="My github profile"
+            class="icon"
+            onclick="location.href='https://github.com/CheesyChilly'" />
+        </div>
+      </div>
+    </section>
     <!-- linking javascript file -->
     <script src="script.js"></script>
   </body>
