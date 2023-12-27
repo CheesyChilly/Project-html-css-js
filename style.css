@@ -7,8 +7,11 @@
 
 :root {
   --bgcol: rgb(253, 253, 253);
+  --hlight:rgb(190, 190, 190);
+  --hover: grey;
   --ptext: rgb(84, 84, 84);
   --button: rgb(53, 53, 53);
+  --fgcol: rgb(0, 0, 0);
 }
 
 * {
@@ -55,15 +58,15 @@ nav {
 }
 
 a {
-  color: black;
+  color: var(--fgcol);
   text-decoration: none;
-  text-decoration-color: white;
+  text-decoration-color: var(--bgcol);
 }
 
 a:hover {
-  color: grey;
+  color: var(--hover);
   text-decoration: underline;
-  text-decoration-color: rgb(190, 190, 190);
+  text-decoration-color: var(--hlight);
   text-underline-offset: 1rem;
 }
 
@@ -99,7 +102,7 @@ a:hover {
 .ham-icon span {
   width: 100%;
   height: 2px;
-  background-color: black;
+  background-color: var(--fgcol);
   transition: all 0.3 ease-in-out;
 }
 
@@ -119,7 +122,7 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: var(--fgcol);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
@@ -254,8 +257,8 @@ section {
 }
 
 .btn-color-1:hover {
-  border: rgb(0, 0, 0);
-  background: rgb(0, 0, 0);
+  border: var(--fgcol);
+  background: var(--fgcol);
 }
 
 .btn-color-2 {
@@ -306,7 +309,7 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+  background: var(--bgcol);
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.15rem solid;
   border-color: rgb(163, 163, 163);
@@ -416,7 +419,7 @@ article div {
   padding: 0.5rem;
 }
 
-.contact-info-container{
+.contact-info-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -424,24 +427,24 @@ article div {
   margin: 1rem;
 }
 
-.contact-info-container p{
+.contact-info-container p {
   font-size: larger;
 }
 
-.contact-icon{
+.contact-icon {
   cursor: default;
 }
 
-.email-icon{
+.email-icon {
   height: 2.5rem;
 }
 
 /* FOOTER SECTION */
-footer{
+footer {
   height: 26vh;
   margin: 0 1rem;
 }
 
-footer p{
+footer p {
   text-align: center;
 }
