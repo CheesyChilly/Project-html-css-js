@@ -110,4 +110,8 @@
   .text-container{
     text-align: justify;
   }
+
+  .menu-links a {
+    font-size: 1.1rem;
+}
 }

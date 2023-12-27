@@ -6,12 +6,11 @@
 /* GENERAL STYLING */
 
 :root {
-  --bgcol: rgb(253, 253, 253);
-  --hlight:rgb(190, 190, 190);
-  --hover: grey;
-  --ptext: rgb(84, 84, 84);
-  --button: rgb(53, 53, 53);
-  --fgcol: rgb(0, 0, 0);
+  --bgcol: #e7ecef;
+  --fgcol: #323748;
+  --hlight: #bf1363;
+  --border: #F06AA9;
+  --container-bg: #F1D0DF;
 }
 
 * {
@@ -22,6 +21,7 @@
 body {
   /* font-family: "Preahvihear", sans-serif; */
   font-family: "Poppins", sans-serif;
+  color: black;
   background-color: var(--bgcol);
 }
 
@@ -30,7 +30,7 @@ html {
 }
 
 p {
-  color: var(--ptext);
+  color: var(--fgcol);
 }
 
 /* TRANSITIONS */
@@ -64,7 +64,7 @@ a {
 }
 
 a:hover {
-  color: var(--hover);
+  color: var(--hlight);
   text-decoration: underline;
   text-decoration-color: var(--hlight);
   text-underline-offset: 1rem;
@@ -72,6 +72,7 @@ a:hover {
 
 .logo {
   font-size: 2.5rem;
+  color: var(--fgcol);
   font-weight: bolder;
 }
 
@@ -108,7 +109,8 @@ a:hover {
 
 .menu-links {
   position: absolute;
-  background-color: var(--bgcol);
+  background-color: var(--container-bg);
+  border-radius: 0.5rem;
   top: 100%;
   right: 0;
   width: fit-content;
@@ -242,7 +244,7 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-  border: var(--button) 0.15rem solid;
+  border: var(--hlight) 0.15rem solid;
 }
 
 .btn-color-1:hover,
@@ -252,7 +254,7 @@ section {
 
 .btn-color-2:hover,
 .btn-color-1 {
-  background: var(--button);
+  background: var(--hlight);
   color: var(--bgcol);
 }
 
@@ -297,6 +299,7 @@ section {
 }
 
 .about-pic {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.11), 0 2px 2px rgba(0,0,0,0.11), 0 4px 4px rgba(0,0,0,0.11), 0 8px 8px rgba(0,0,0,0.11), 0 16px 16px rgba(0,0,0,0.11), 0 32px 32px rgba(0,0,0,0.11);
   border-radius: 2rem;
 }
 
@@ -309,10 +312,11 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.11), 0 2px 2px rgba(0,0,0,0.11), 0 4px 4px rgba(0,0,0,0.11), 0 8px 8px rgba(0,0,0,0.11), 0 16px 16px rgba(0,0,0,0.11), 0 32px 32px rgba(0,0,0,0.11);
   background: var(--bgcol);
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.15rem solid;
-  border-color: rgb(163, 163, 163);
+  border: var(--border) 0.15rem solid;
+  border-color: var(--border);
   text-align: center;
 }
 
@@ -334,7 +338,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: var(--hlight);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -379,8 +383,8 @@ article div {
 }
 
 .color-container {
-  border-color: rgb(163, 163, 163);
-  background: rgb(253, 253, 253);
+  border-color: var(--border);
+  background: var(--bgcol);
 }
 
 .project-img {
@@ -391,12 +395,12 @@ article div {
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: var(--fgcol);
 }
 
 .project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
+  color: var(--fgcol);
+  border-color: var(--border);
 }
 
 /* CONTACT SECTION */
@@ -411,10 +415,11 @@ article div {
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
-  border: rgb(53, 53, 53) 0.15rem solid;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.11), 0 2px 2px rgba(0,0,0,0.11), 0 4px 4px rgba(0,0,0,0.11), 0 8px 8px rgba(0,0,0,0.11), 0 16px 16px rgba(0,0,0,0.11), 0 32px 32px rgba(0,0,0,0.11);
+  border: var(--border) 0.15rem solid;
   border-radius: 2rem;
-  border-color: rgb(163, 163, 163);
-  background: rgb(253, 253, 253);
+  border-color: var(--border);
+  background: var(--bgcol);
   margin: 2rem auto;
   padding: 0.5rem;
 }
