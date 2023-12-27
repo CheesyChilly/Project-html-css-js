@@ -79,6 +79,7 @@
   }
   .contact-info-container{
     margin: 0;
+    line-height: 3rem;
   }
 
   .contact-info-container p, .nav-links li a{

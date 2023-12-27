@@ -71,13 +71,17 @@ a:hover {
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  padding: 10px;
   color: var(--fgcol);
-  font-weight: bolder;
+  transition: color .4s ease-in-out, box-shadow .4s ease-in-out;
+  font-weight: 900;
 }
 
 .logo:hover {
+  color: var(--bgcol);
   cursor: default;
+  box-shadow: inset 400px 0 0 0 #323748;
 }
 
 /* HAMBURGER */
@@ -434,6 +438,10 @@ article div {
 
 .contact-info-container p {
   font-size: larger;
+}
+
+.contact-info-container a:hover{
+  text-decoration-thickness:2px;
 }
 
 .contact-icon {
