@@ -6,14 +6,11 @@
 /* GENERAL STYLING */
 
 :root {
-  /* --bgcol: #e7ecef;
+  --bgcol: #e7ecef;
   --fgcol: #323748;
   --hlight: #bf1363;
-  --border: #ee87b7;
-  --container-bg: #ffebf4; */
-  --bgcol: #eceeff;
-  --fgcol: #545b8c;
-  --hlight: #ff83b9;
+  --border: #F06AA9;
+  --container-bg: #F1D0DF;
 }
 
 * {
@@ -21,23 +18,11 @@
   padding: 0;
 }
 
-*,
-*:after,
-*:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 body {
   /* font-family: "Preahvihear", sans-serif; */
   font-family: "Poppins", sans-serif;
   color: black;
   background-color: var(--bgcol);
-  /* background: url('./Assets/vecteezy_white-paper-textured-background_9741234.jpg') var(--bgcol);
-  background-size: 100%;
-  background-blend-mode: multiply; */
 }
 
 html {
@@ -89,14 +74,14 @@ a:hover {
   font-size: 3rem;
   padding: 10px;
   color: var(--fgcol);
-  transition: color 0.5s ease-in-out, box-shadow 0.4s ease-in-out;
+  transition: color .4s ease-in-out, box-shadow .4s ease-in-out;
   font-weight: 900;
 }
 
 .logo:hover {
   color: var(--bgcol);
   cursor: default;
-  box-shadow: inset 400px 0 0 0 var(--hlight);
+  box-shadow: inset 400px 0 0 0 #323748;
 }
 
 /* HAMBURGER */
@@ -128,7 +113,7 @@ a:hover {
 
 .menu-links {
   position: absolute;
-  background-color: var(--bgcol);
+  background-color: var(--container-bg);
   border-radius: 0.5rem;
   top: 100%;
   right: 0;
@@ -318,9 +303,7 @@ section {
 }
 
 .about-pic {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
-    0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),
-    0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.11), 0 2px 2px rgba(0,0,0,0.11), 0 4px 4px rgba(0,0,0,0.11), 0 8px 8px rgba(0,0,0,0.11), 0 16px 16px rgba(0,0,0,0.11), 0 32px 32px rgba(0,0,0,0.11);
   border-radius: 2rem;
 }
 
@@ -331,124 +314,15 @@ section {
 }
 
 .details-container {
-  width: 100%;
-  height: 100%;
-  align-items: center;
-
   padding: 1.5rem;
-  /* flex: 1; */
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
-    0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),
-    0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
+  flex: 1;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.11), 0 2px 2px rgba(0,0,0,0.11), 0 4px 4px rgba(0,0,0,0.11), 0 8px 8px rgba(0,0,0,0.11), 0 16px 16px rgba(0,0,0,0.11), 0 32px 32px rgba(0,0,0,0.11);
   background: var(--bgcol);
   border-radius: 2rem;
-  border: var(--fgcol) 0.15rem solid;
-  border-color: var(--fgcol);
+  border: var(--border) 0.15rem solid;
+  border-color: var(--border);
   text-align: center;
-
-  position: relative;
-  display: flex;
-  transition: all 0.6s ease-out;
-  transform: rotateX(0deg) rotateY(0deg);
-  perspective: 1000px;
-  transform-style: preserve-3d;
 }
-
-.content {
-  transform: translateZ(40px);
-}
-
-.tilt-box-wrap {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  transition: all 0.6s ease-out;
-  perspective: 1000px;
-}
-
-.tilt-box-wrap:hover {
-  transition: all 0.3s linear;
-  transform: scale(1.1);
-}
-
-.t_over {
-  width: 33.333%;
-  height: 33.333%;
-  position: absolute;
-  z-index: 1;
-}
-
-.t_over:nth-child(1) {
-  left: 0;
-  top: 0;
-}
-.t_over:nth-child(2) {
-  left: 33.333%;
-  top: 0;
-}
-.t_over:nth-child(3) {
-  left: 66.666%;
-  top: 0;
-}
-.t_over:nth-child(4) {
-  left: 0;
-  top: 33.333%;
-}
-.t_over:nth-child(5) {
-  left: 33.333%;
-  top: 33.333%;
-}
-.t_over:nth-child(6) {
-  left: 66.666%;
-  top: 33.333%;
-}
-.t_over:nth-child(7) {
-  left: 0;
-  top: 66.666%;
-}
-.t_over:nth-child(8) {
-  left: 33.333%;
-  top: 66.666%;
-}
-.t_over:nth-child(9) {
-  left: 66.666%;
-  top: 66.666%;
-}
-.t_over:nth-child(1):hover ~ .tilt-box {
-  transform: rotateX(-20deg) rotateY(20deg);
-}
-.t_over:nth-child(2):hover ~ .tilt-box {
-  transform: rotateX(-20deg) rotateY(0deg);
-}
-.t_over:nth-child(3):hover ~ .tilt-box {
-  transform: rotateX(-20deg) rotateY(-20deg);
-}
-.t_over:nth-child(4):hover ~ .tilt-box {
-  transform: rotateX(0deg) rotateY(20deg);
-}
-.t_over:nth-child(5):hover ~ .tilt-box {
-  transform: rotateX(0deg) rotateY(0deg);
-}
-.t_over:nth-child(6):hover ~ .tilt-box {
-  transform: rotateX(0deg) rotateY(-20deg);
-}
-.t_over:nth-child(7):hover ~ .tilt-box {
-  transform: rotateX(20deg) rotateY(20deg);
-}
-.t_over:nth-child(8):hover ~ .tilt-box {
-  transform: rotateX(20deg) rotateY(0deg);
-}
-.t_over:nth-child(9):hover ~ .tilt-box {
-  transform: rotateX(20deg) rotateY(-20deg);
-}
-
-.details-container p {
-  color: var(--fgcol);
-}
-
-/* .details-container h3 {
-  color: var(--hlight);
-} */
 
 .section-container {
   gap: 4rem;
@@ -513,8 +387,8 @@ article div {
 }
 
 .color-container {
-  border-color: var(--fgcol);
-  background: var(--fgcol);
+  border-color: var(--border);
+  background: var(--bgcol);
 }
 
 .project-img {
@@ -525,19 +399,12 @@ article div {
 
 .project-title {
   margin: 1rem;
-  color: var(--bgcol);
+  color: var(--fgcol);
 }
 
 .project-btn {
-  background-color: var(--bgcol);
-  color: var(--hlight);
-  border-color: var(--hlight);
-}
-
-.project-btn:hover {
-  background-color: var(--hlight);
-  color: var(--bgcol);
-  border-color: var(--fgcol);
+  color: var(--fgcol);
+  border-color: var(--border);
 }
 
 /* CONTACT SECTION */
@@ -552,12 +419,10 @@ article div {
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
-    0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),
-    0 16px 16px rgba(0, 0, 0, 0.11), 0 32px 32px rgba(0, 0, 0, 0.11);
-  border: var(--fgcol) 0.15rem solid;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.11), 0 2px 2px rgba(0,0,0,0.11), 0 4px 4px rgba(0,0,0,0.11), 0 8px 8px rgba(0,0,0,0.11), 0 16px 16px rgba(0,0,0,0.11), 0 32px 32px rgba(0,0,0,0.11);
+  border: var(--border) 0.15rem solid;
   border-radius: 2rem;
-  border-color: var(--fgcol);
+  border-color: var(--border);
   background: var(--bgcol);
   margin: 2rem auto;
   padding: 0.5rem;
@@ -575,8 +440,8 @@ article div {
   font-size: larger;
 }
 
-.contact-info-container a:hover {
-  text-decoration-thickness: 2px;
+.contact-info-container a:hover{
+  text-decoration-thickness:2px;
 }
 
 .contact-icon {
